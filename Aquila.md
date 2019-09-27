@@ -123,7 +123,7 @@ VCF file (from FreeBayes)
 
 ![](IMAGES/stLFR.jpg)
 
-### stLFR barcodes
+### stLFR barcodes - (Read 2)
 ![](IMAGES/stLFR-bars.png)
  - 1538 uniq 10-mer barcodes
  - 3.6 billion barcode options
