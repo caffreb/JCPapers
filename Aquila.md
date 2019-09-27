@@ -121,14 +121,14 @@ VCF file (from FreeBayes)
 
 ### stLFR experimental protocol
 
-![](../IMAGES/stLFR.jpg)
+![](IMAGES/stLFR.jpg)
 
 ### stLFR barcodes
-![](../IMAGES/stLFR-bars.png)
+![](IMAGES/stLFR-bars.png)
  - 1538 uniq 10-mer barcodes
  - 3.6 billion barcode options
 
 ### 10x barcodes
-![](../IMAGES/10x-barcodes.png)
+![](IMAGES/10x-barcodes.png)
  - 4.7 million uniq 16-mer barcodes
 
