@@ -5,7 +5,7 @@
 - SNP data from GATK PBT of trio data 
 - NA12878 MinION samples
 
-#Software and Databases used
+# Software and Databases used
 - LAST (mapping)
 - Delly and Manta for SV calling on Illumina
 - Sniffles, Lumpy and NanoSV for MinION
@@ -38,6 +38,8 @@
 - SINE elements less abundant in Nanopore data
 - Many more short deletions discovered than short read data. Expected due to short reads.
 - Many more LINE insertions, again expected.
+- Many errors in the homopolymer regions as expected by MinION
+- All known breakpoints found for patient 1. not for patient 2 but with lower coverage.
 
 # Questions
 - Is karyotyping just this simple picture thing?
@@ -45,3 +47,7 @@
 - Precision of only 2%?????
 - Important to think about the proportion of LINES/SINES correctly
 - Fig5 b & c??
+- Discussion red section??
+- What are the differences in the kits which are used?
+
+- Are such rearrangements thought to be common? i.e. do similar phenotypes have similar rearrangements? Similar locations?
