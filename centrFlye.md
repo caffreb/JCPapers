@@ -11,8 +11,7 @@
  
 ### Used
  - Noise-cancelling repeat finder (NCRF)
- - *fitting alignment*
- - 
+ - *fitting alignment* from edlib: C++ library for fast exact sequence alignment using edit distance.
  
 ## Data and technologies used
 ### Technologies applicable
