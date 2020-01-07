@@ -6,19 +6,19 @@
 
 ## Software used/provided/compared
 
-### Provided
+#### Provided
  - centroFlye: software described in this paper
  
-### Used
+#### Used
  - Noise-cancelling repeat finder (NCRF)
  - *fitting alignment* from edlib: C++ library for fast exact sequence alignment using edit distance.
  
 ## Data and technologies used
-### Technologies applicable
+#### Technologies applicable
 - Pac-bio
 - Oxford Nanopore 
 
-### Input data
+#### Input data
 - Read set (long reads)
 - concensus HOR
 
@@ -33,10 +33,11 @@
 
 ### Mapping reads to assemblies
  - for each 2 assemblies they used the shared unique 19-mers to align centromeric reads.
- - 
+ - These were filtered by removing those rare 19-mers which were also a hamming distance of 1 away from a common 19-mer, i.e. a sequencing error.
  
  
 ### Pipeline
+ - Listed in paper, page 3
 
 ## Sources and related Papers
  - Flye [kolmogorov et al. 2019](https://www.nature.com/articles/s41587-019-0072-8)
