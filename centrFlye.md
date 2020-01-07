@@ -69,7 +69,7 @@
  - Fig 5
  - ONT are characterised by uniform read coverage so spikes are important
  - ONT does have non-uniform read "length" distribution
- - 
+ - Enter the following tests
 
 #### Discordance test
  - Use kmers as anchors for discrdance
