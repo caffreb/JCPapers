@@ -52,7 +52,7 @@
  - Sniffles is best if used with minimap2 or NGMLR
  - SVIM performance is independant of mapper
  - Sniffles often misclassifies zygocity
- - 
+
 
 ### Combining call sets
  - Using all callers together yields best results
