@@ -13,6 +13,9 @@
  - DeepVariant: deep learning variant caller for long reads.
  - Clairvoyante: deep leearning variant caller
  - WhatsHap: deep learning haplotype phaser
+ - Nanopolish, variant caller performing signal level analysis of ONT data.
+ - Platnum genomes small variant call set with 17 member pedigree set.
+ - 
 
 ## Data and technologies used
  - Genome in a bottle (GIAB) Pacbio data NA12878 (45x) and Ashkenazi trio (NA24385 (64x), NA24149 (29x) and NA24143 (27x) )
@@ -21,6 +24,19 @@
 ## Sources and related Papers
 
 ## Methods
+
+### Identification of candidate SNVs
+
+### Local realignment using pair-HMMs
+
+### Haplotype-informed genotyping
+
+### Variant filtering
+
+### Simulations
+
+
+
 
 ## Results
 
@@ -57,13 +73,33 @@
  - Median read lengths were 3587bp (NA12878) and 7235bp (NA24385)
  - N50 of 217.4kb (NA12878 Longshot) and 299.9kb (NA24385 Longshot 30x)
  - Switch error rates of 0.05% (NA12878) and 0.04% (NA24385)
+ - Haplotype assigned reads had a median length of 4.3kb vs 2.6kb of those which were unassigned. i.e. longer reads are better.
+
+### SNV calling using Oxford Nanopore reads
+ - ONT reads are claimed as higher than PacBio
+ - Context specific errors in ONT
+ - Longshot had better F1 score than Nanopolish and much quicker.
  
- 
+### Analysis of SNV calls in repetitive regions
+ - 55% more SNVs were called using SMS reads over Illumina. (Seg dup >95% similarity)
+ - 90.3% of bases in segmentally duplicated (>95% similarity) regions were mapped in 45x Pacbio.
+ - 4 fold greater SNV calling in segmental duplication regions with >99% similarity
+ - Ts/Tv ratio is calculated as 1.9 via long reads and 1.5 with Illumina, expected to be 2.0-2.1 genome wide
+ - Mendelian consistency of SNV calls, better in long reads. Many discordant calls clustered in contiguous blocks suggesting mismatched reads or Structural variation in the trio which has not been accurately resolved.
+ - Platinum Genomes small variant set has a lot of regions which are not in GIAB. Outside the GIAB regions the concordance of calls dropped from 95.2% to 79.6%. Suggesting that the GIAB regions are great to have but are only a snapshot. 
 
 
 
 ## Discussion
-
+ - Li et al. claimed that Pacbio is good for assembly at base pair level but not yet accurate enough to call heterozygotes in diploid mammalian genomes.
+ - They claim that SNVs can be called using long reads via allelotyping and haplotype-informed genotyping
+ - SNVs can be called in segmental duplication regions but is still a problem in regions with extremely high similarity between the duplications. 
+ - SMS read mappers with specific optimizations for seg dup regions could help.
+ - The GIAB and Platinum genomes datasets may represent regions which have a bias towards short reads since these projects were started with short reads in mind and don't include many seg dup regions. Thus, Longshot could be even better.
+ - Recent paper identifies 5900 SNVs that are absent in the GIAB call sets. 
+ - Most false positives by Longshot occur in regions with mis-called indels. 
+ - Using haplotype separated reads could improve calling with Longshot
+ - 
 
 
 ### Definitions
