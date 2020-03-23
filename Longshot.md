@@ -26,12 +26,22 @@
 ## Methods
 
 ### Identification of candidate SNVs
+ - Identified via pileup of aligned reads via a genotype likelihood calculation.
+ - filtered for min coverage (6) and alternate allele number(3) and alternate allele fraction (0.125)
 
 ### Local realignment using pair-HMMs
+ - Realign parts of the read to a small window around an SNV using a Pair-HMM.
+ - Use k-mer anchors on each side.
+ - Parameters of HMM (i.e. transitions from A->A, A->T etc.) are estimated from aligned reads prior to realignment.
+ - Calculate the probability of the read given the ref and alt sequences. Take the higher prob as the ref.
+ - Filtered SNVs which had reads over represented from one allele. 
 
 ### Haplotype-informed genotyping
 
 ### Variant filtering
+ - Filtered according to GQ value, variable threshold for Longshot.
+ - Read depth greater than $d+5*sqrt(d)$, d is median read depth
+ - 
 
 ### Simulations
 
@@ -106,6 +116,7 @@
  - __Allelotyping:__ 
  - __Genotype Quality (GQ) threshold:__ The Genotype Quality represents the Phred-scaled confidence that the genotype assignment (GT) is correct, derived from the genotype PLs
  - __Switch error rate:__ Errors which 
+ - __Pair HMM:__ Emmisions are paired for sequence alignment. https://web.stanford.edu/class/cs262/archives/notes/lecture8.pdf
 
 ### Input files
 
