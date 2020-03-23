@@ -41,11 +41,13 @@
 ### Variant filtering
  - Filtered according to GQ value, variable threshold for Longshot.
  - Read depth greater than $d+5*sqrt(d)$, d is median read depth
- - 
+ - Density filter to remove clustering SNVs which could be due to missing information in the reference
 
 ### Simulations
-
-
+- hetero SNV rate of 0.001
+- homo SNV rate of 0.0005
+- sub rate of 0.001
+- SimLord for long reads
 
 
 ## Results
