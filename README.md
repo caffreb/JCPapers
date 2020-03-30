@@ -10,3 +10,4 @@
  - [Nebula](Nebula.md)
  - [PromethION: Ox Nanopore](PromethION.md)
  - [Longshot](Longshot.md)
+ - [Simplitigs](Simplitigs.md)
