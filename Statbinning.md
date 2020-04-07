@@ -10,6 +10,12 @@
 ## Sources and related Papers
 
 ## Methods
+### Standard Data Preprocessing
+- Extract barcode and read sequence
+- Correct the barcode based on quality score and known barcodes
+- group reads by barcode into "barcode buckets" to enable parlallelism during alignment
+
+
 
 ## Results
 
