@@ -4,7 +4,7 @@
 
 ### Provided
 ### Used 
- - Meerkat
+ - Meerkat (Somatic variants)
 
 ## Data and technologies used
  - WGS 30-60x for 5 of 18 cancers (Total samples: ??)
@@ -34,3 +34,5 @@
 - Sceptical about chromatin modification data?
 - Binning by size?
 - partial copy loss?
+- ATAC-Seq??
+- TF analysis??
