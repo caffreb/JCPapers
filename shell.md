@@ -26,5 +26,7 @@
 
 ## Notes or interesting claims
 
+## Links to descriptions
+
 ## Questions/problems
 
