@@ -30,4 +30,4 @@
 
 ## Questions/problems
 
-Return to [JC start](../../../)
+Return to [JC start](../../)
