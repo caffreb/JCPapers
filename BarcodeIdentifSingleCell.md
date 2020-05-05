@@ -65,3 +65,4 @@ __Levenschtein distance:__ The edit distance. Not to be confused with the hammin
 - Are single cell setups more prone to non-sequencing errors? 
 - Inflection point is going to work on all datasets?
 - No use of the whitelist? No need?
+- Mice and human have different barcodes? Are the barcodes similar?
