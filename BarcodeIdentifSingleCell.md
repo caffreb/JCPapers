@@ -1,4 +1,4 @@
-# Title
+# Barcode identification for single cell genomics
 
 ## Software 
 ### Provided
