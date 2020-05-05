@@ -53,6 +53,8 @@
 __Levenschtein distance:__ The edit distance. Not to be confused with the hamming distance.
 
 ### Input files
+- single cell data, e.g. fastq files
+
 
 ## Useful Figures
 
