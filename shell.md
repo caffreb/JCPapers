@@ -30,4 +30,4 @@
 
 ## Questions/problems
 
-Return to [JC start](../../../Readme.md)
+Return to [JC start](../../../)
