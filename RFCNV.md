@@ -101,6 +101,37 @@ https://academic.oup.com/nargab/article/2/3/lqaa071/5910007
 - 570 true and 1506 false duplications
 - Down sampling shows a negative correlation between OOB error rate and the number of training deletions. Indicating TRaining data needs to be large enough. Duh.
 - standard RF output showed the ranked importance of each feature via Mean Decreased Accuracy and Mean decreased Gini.
+- MEan depth, length and DI show the greatest power for deletions
+- Length, Left.RL and Repeat.Pct for duplications.
+- OOB error rate os 1.29% for deletion and 2.94% for duplication
+
+### Performace evaluation using benchmark CNVs
+- 3 short-read datasets from 1000GP. Ashkenazim trio and HuRef/Venter genome. 
+- Duplications not considered as they were not part of the benchmark set
+- Fig 2, Overlap of SVs from Pacbio, MetaSV and SVclassify. Consensus datasets.
+- 2067 shared deletions
+- Fig 2b, breakpoints vary
+- Fig 2C CNV-JACG is better (sensitivity is the true positive proportion)
+- Fig 2D Number of deletions for each sample
+- Sensitivity of benchmark deletions Fig 2E
+- Down sampled the data, conclude convergence at 15x but 10x got sensitivity of 0.85 already.
+- Table 2. False deletions. Better than the other tool but both very good.
+
+### Evaluation of Mendelian inconsistency using trios
+- 6 trios from 1000GP, HGSV and GIAB
+- Combined phenomenon from false negatives in parents, false positives in offspring and true de novo CNVs
+- Figure 3
+- Used different callers and conclude that their approach is robust against the caller type
+
+### Evaluation of concordance using 11 pairs of technical replicates
+- generated 11 paired samples
+- everything equal just 2 runs on the same machine.
+- Fig 4
+
+### Computational considerations
+- 4GB RAM, 30 minutes
+
+
 
 
 ## Discussion
