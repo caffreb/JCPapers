@@ -21,15 +21,17 @@ https://academic.oup.com/nargab/article/2/3/lqaa071/5910007
 - Define a CNV as a structural variant charecterized by alterations in the number of copies of a DNA segment.
 - Known to alter gene dosage, disrupt coding sequences and affect gene regulation.
 - Underlie many Mendelian diseases and represent a portion of the missing heritability in human complex diseases and congenital abnormalities
+- Fig 1. Describe Random Forest. Bootstrap the data, i.e. sub sample with replacement, randomly choose 2 features, better one leads to bifurcation, build more. ntree=number of trees, mtry=number of features to randomly select.
+- OOB error.
 
 ### Existing methods
 - Based on Read depth (RD), read pairs (RP), split reads (SR), and assembly.
-- Read depth looks for abnormal patterns in read mapping, i.e. diploid genome should have even mapping if there are even copy number. In the case of a duplication of one allele then perhaps there are double or triple the number of reads.
+- Read depth looks for abnormal patterns in read mapping, i.e. diploid genome should have even mapping if there are even copy number. In the case of a duplication of one allele then perhaps there are 1.5x, double or triple the number of reads.
 - Read depth have particular trouble in repeat regions. 
 - Read pair methods identify CNVs by finding pairs with extreme differences in the insert size relative to background.
-- Split read methods use soft clipping to which span breakpoints to detect CNVs.
-- Both RP and SR methods have disadvantages in detecting non-allelic homologous recombination-induced CNVs because of low-copy repeat induced junction reads.
-- Not much mentioned about assembly methods there.
+- Split read methods use soft clipping which span breakpoints to detect CNVs.
+- Both RP and SR methods have disadvantages in detecting non-allelic homologous recombination-induced CNVs because of low-copy repeat induced junction reads. ??
+- Nothing mentioned about assembly methods there or anywhere.
 
 ### Approach problems
 - Some filter out problematic regions to improve precision but this obviously leads to a higher number of false negatives.
