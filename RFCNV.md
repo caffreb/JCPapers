@@ -40,7 +40,68 @@ https://academic.oup.com/nargab/article/2/3/lqaa071/5910007
 
 ## Methods
 
+### Initial summary
+- 21 features
+- Used Random Forest (RF) classifier 
+- Input: genomic coordinates of CNVs and BAM files
+
+### Scaling read depth
+- Normalization is needed for read depth related features
+- Used invariant genomic regions that are depleated of CNVs
+- used 100 WGS in house samples
+- One region for each autosome with mean read depth resembling the average, with the lowest Standard deviation and not overlapping CNVs from databases
+- Used these means as a denominator to scale read depth related features
+
+### Feature Extraction
+
+#### Features around breakpoints
+- Left repeat and right repeat. Is the left or right breakpoint within a repeat region
+- Orientation of read pair at the breakpoint (Left.RL and Right.RL). Scaled number of pairs supporing RL/LL/RR etc.
+- Support of soft clipped reads (SCR). number of soft clipped reads at the left/right/both breakpoints
+- two more features (DI and IN) correspond to the SCRs in direct/inversed mapping orientation for clipped and non-clipped sequence.
+
+#### Features for the region encompassed by the CNV
+- Mean read depth
+- Length of the CNV
+- Microhomology: compare CIGAR strings and find if they indicate a discrepancy.
+- GC content
+- Repeat Percentage
+- Number of common SNPs (MAF>0.1)
+
+#### Called variants within the CNV
+- number of heterozygous SNPs, defined heterozygous if >3 reference allele support reads, >3 alternative allele support reads, proportion of alternative allele support reads >0.2
+- Probability of heterozygosity, mean of all probabilities of SNPs from 1000GP
+
+### Defining true and false training CNVs
+- Used parent-offspring trios with good diversity-to-noise ratios
+- True set were selected:
+- - inherited from one of the parents
+- - detected by at least 3 tools
+- Negative set:
+- - Not inherited
+- - detected by only 1 tool
+- - Not in Database
+
+### Training data and construction of random forest model training
+- 9 in house trios
+- built two classifiers, 1 for deletions and 1 for duplications
+- Used the Random forest from R package having extracted the features
+- tuned the parameters ntree and mtry for each classifier
+- Feature importance was assesed by RF standard output and Boruta algorithm
+- Assessed the relationship between the OOB error and size of training set by down-sampling the training data
+
+### Sequencing data
+- 6 paired end WGS datasets plus 9 trios(healthy parents+one child with Hirschsprung disease)
+
+
 ## Results
+
+### Training of random forest
+- assembled 19,525 true and 25,268 false deletions
+- 570 true and 1506 false duplications
+- Down sampling shows a negative correlation between OOB error rate and the number of training deletions. Indicating TRaining data needs to be large enough. Duh.
+- standard RF output showed the ranked importance of each feature via Mean Decreased Accuracy and Mean decreased Gini.
+
 
 ## Discussion
 
