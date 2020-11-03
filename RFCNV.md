@@ -103,7 +103,7 @@ https://academic.oup.com/nargab/article/2/3/lqaa071/5910007
 - 570 true and 1506 false duplications
 - Down sampling shows a negative correlation between OOB error rate and the number of training deletions. Indicating TRaining data needs to be large enough. Duh.
 - standard RF output showed the ranked importance of each feature via Mean Decreased Accuracy and Mean decreased Gini.
-- MEan depth, length and DI show the greatest power for deletions
+- Mean depth, length and DI (Direct orientation) show the greatest power for deletions
 - Length, Left.RL and Repeat.Pct for duplications.
 - OOB error rate os 1.29% for deletion and 2.94% for duplication
 
