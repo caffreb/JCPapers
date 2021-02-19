@@ -22,7 +22,11 @@ https://github.com/Parsoa/PingPong
 ### Used or compared
 - ntEdit
 - BBMap
+- minimap2
 - PGSIM
+- BCFtools
+- BEDTOOLS
+- kmc_tools (Compared)
 
 
 ## Data and technologies used
@@ -45,14 +49,34 @@ https://github.com/Parsoa/PingPong
 - Low Tau cutoff not good wrt Precision at high coverage, 5x coverage not enough for recall (basically)
 
 - 98% recall and 82% precision at recovering simulated de novo variations. T=5.
-- mapped child specific strings to trio, child specific map 83%, compared to M+P, Sup 1. Looks good
+- mapped child specific strings to trio, child specific map 83%, compared to M+P, Fig Sup 1. Looks good
 
 ### Specific string detection in real human HiFi data
 - We considered the HG00733 child (Puerto Rican trio) and the NA19240 child (Yoruba trio). 30x
+- Compared Exact and relaxed ping pong search (Exact is better) Fig S3
+- Contig analysis from HGSVC2 consortium. Fig 4, 80% of child specific strings map perfectly. ????
+- C-precision (contigs-based precision) metric introduced. The exact version of our algorithm therefore achieved a C-precision of 79.47%. On the other hand, the relaxed version achieved a C-precision of 90.61%.
+
+- specific strings computed by exact algorithm intersect most of the HG00733-specific alleles (> 98%), covering nearly all alleles coming from SNPs and indels (> 98% and > 95%, respectively) and most of alleles coming from SVs (> 92%).
+- Table 1.
+- majority of the variants not covered by the sample- specific strings were indels in stretches of A or T sequences
+- Fig 4 c/d
+- investigate why ∼ 27% of the specific strings align well to the HG00733 haplotypes but do not represent a specific portion of them
 - 
 
 
-## Discussion
+
+## Discussion Points
+- Intro? Anything obvious
+- Data looks ok?
+- Methods are solid?
+- Other tools which could be compared?
+- Other analyses which could be performed?
+
+
+## Writing problems
+- some things introduced in the wrong place?
+- Format is ok?
 
 
 
