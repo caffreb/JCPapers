@@ -4,10 +4,14 @@
 ### Provided
 ### Used 
 - Supernova (assembly)
+- Paragraph (SV detection tool)
 
 ## Data and technologies used
 - PacBio haploid assemblies on 7 human and 2 hydatidiform mole genomes
-- 10x linked reads 
+- 10xG linked reads 
+- NCBI RefSeq genes
+- gene predictions database
+- 
 
 
 
@@ -46,8 +50,18 @@
 
 
 ### Non-reference unique insertions affecting genic and regulatory elements.
+- identified 59,332 NUIs overlapping genic loci.
+- Among these, 521 recurrent NUIs are in coding exons, 1738 in 3′UTR, 1200 in 5′UTR, and 55,878 in introns.
+- As expected, only 5% of genes affected by out-of-frame small exonic NUIs are extremely intolerant to loss-of-function changes
+- Figure 2. Describe
 
 ### Detailed genomic analysis of exonic insertions.
+- took a closer examination of four insertions affecting coding sequences.
+-  METTL21C, an identical amino acid sequence in the same gene in the chimpanzee RefSeq protein database (ID: XP_009425476.2), indicating that this insertion is conserved and thus likely to be ancestral and functional.
+-  Figure 3.
+-  identified two alternate splicing events in the inserted sequence upstream of the original start codon 
+-  Using the HDR, RNA-Seq reads from GTEx can now be mapped precisely across this junction  
+
 
 ### Mapping improvement and the identification of novel poly- morphic site in the Human Diversity Reference.
 
@@ -63,6 +77,7 @@
 
 
 ### Definitions
+- HDR: Human Diversity Reference
 
 ### Input files
 
