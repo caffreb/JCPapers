@@ -6,6 +6,10 @@
 - Supernova (assembly)
 - Paragraph (SV detection tool)
 - GATK HaplotypeCaller
+- kinship calculation using KING v2
+- Longranger
+- Nucmer
+- Assemblytics (insertion detection)
 
 ## Data and technologies used
 - PacBio haploid assemblies on 7 human and 2 hydatidiform mole genomes
@@ -20,6 +24,73 @@
 ## Sources and related Papers
 
 ## Methods
+
+### Sample collection and data generation
+- Re-sequenced a bunch of well known datasets
+- Kinship calculations with KING v2
+- Samples were removed if the pairwise estimated kinship coefficient exceeds 0.0442, which indicates at least third-degree relationships.
+- Polaris samples with mean inferred molecule length below 40 kb were excluded. 
+- The motivation to include PacBio assemblies was to supplement 10xG assembles in regions of low complexity.
+
+
+### Reference terminology. 
+
+
+### Definitions of non-reference unique insertions.
+- Insert size ≥10 bp.
+- Reference breakpoints not overlapping segmental duplications (downloaded as part of the pre-built reference package provided by 10xG).
+- Reference breakpoints not overlapping SV filter file (downloaded as part ofthe pre-built reference package provided by 10xG).
+- Identified in at least two samples.
+- Pass filtering criteria as defined in the section “Sequence annotations for
+filtering” under pipeline architecture.
+
+
+### Pipeline architecture.
+- per-sample insertion calling
+- clustering and choosing representative non-redundant insertions
+- applying additional filters
+- constructing the HDR
+
+- Calls in decoy, alternate, unplaced, and unlocalized contigs were excluded. 
+- SV blacklist, and segmental duplications as defined by 10xG—to remove potentially spurious calls. 
+- Insertions ≥10 bp was used as the size cutoff for this study and the primary reason is that most SV callers are able to detect insertions <10 bp with high specificity and sensitivity.
+
+- Singletons (components with sequences from only one sample) are discarded at this point. 
+- all sequences were extracted, repeat-masked, and passed on to the multiple alignment algorithm kalign30. During sequence extraction, paddings were added to insertion sequences to improve the accuracy of multiple alignments. 
+- During repeat masking, only low complexity DNA and simple repeats were masked
+
+
+### Sequence annotation.
+
+### SV genotyping.
+- Genotyped 70 randomly selected SGDP individuals using Paragraph
+- Samples were aligned to the HDR. 
+
+
+### Modeling NUI diversity and population structure.
+- we performed down-sampling to compare samples
+
+
+
+### Whole-genome sequence mapping analysis.
+
+### Identification of new polymorphic sites using GATK. 
+
+### Transcriptomic diversity through RNA-sequencing.
+
+### Tissue-specific gene expression analysis
+-  using the “topGO” package available through R
+-  
+
+### Insertion placement and size validation. 
+
+### Reference gap closure. 
+
+### NUI comparison.
+- We compared our NUI data set against two publicly available resources: 1000GP and gnomAD (insertion calls only). 
+
+### Pipeline comparison (HDR vs GRCh38). 
+
 
 ## Results
 
@@ -93,6 +164,7 @@
 
 ### Definitions
 - HDR: Human Diversity Reference
+- NUI: non-reference unique insertions
 
 ### Input files
 
