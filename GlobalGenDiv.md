@@ -18,9 +18,6 @@
 - gene predictions database
 - GTEx RNA-Seq data
 
-
-
-
 ## Sources and related Papers
 
 ## Methods
