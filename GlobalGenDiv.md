@@ -5,13 +5,14 @@
 ### Used 
 - Supernova (assembly)
 - Paragraph (SV detection tool)
+- GATK HaplotypeCaller
 
 ## Data and technologies used
 - PacBio haploid assemblies on 7 human and 2 hydatidiform mole genomes
 - 10xG linked reads 
 - NCBI RefSeq genes
 - gene predictions database
-- 
+- GTEx RNA-Seq data
 
 
 
@@ -64,16 +65,30 @@
 
 
 ### Mapping improvement and the identification of novel poly- morphic site in the Human Diversity Reference.
+- aligned sequences from 70 Simons Genome Diversity Project (SGDP) to ref and HDR
+- On average, 402,573 previously unmapped reads from each individual could be aligned to the HDR (~40x)
+- In other words, for every gained read, only 0.16 read is lost.
+- an average of 27,658 SNPs and 11,219 indels in the NUIs.
+- Africans have 5238 and 929 more SNPs and indels than the non-African averages. Significant compared to all other groups
+- 
 
 ### Transcriptomic analysis using previously unmapped reads.
+- identified unique RNA-seq read alignment in 4781 genes across all tissues
+- 77% of genes have OMIM annotations implying functional importance
 
 ### Tissue-specific gene expression analysis.
+- Figure 4a, Testes with most DE genes. Stomach with fewest
+- GO analysis. Chemical synaptic transmission, neurotransmitter transport, and nervous system development were among the most significant enriched terms in the brain. 
+- In the spleen, immune-related processes were significantly enriched while epidermis development genes were among the top in the skin.
+- Taken together, these results highlight the transcriptomic diversity found within the NUIs
+
 
 ### Gap closing on the reference genome.
-
+- We targeted 539 gaps in the core reference assemblies for gap closure. We fully filled 220 gaps and minimized an additional 13 (43%)
+- Figure 1.
 
 ## Discussion
-
+- Need more diversity in sequences samples
 
 
 ### Definitions
