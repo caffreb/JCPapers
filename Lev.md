@@ -13,6 +13,7 @@
 - Novel-X
 
 - LRez (index)
+- LRsim
 - 
 
 
@@ -46,5 +47,8 @@
 ## Links to descriptions
 
 ## Questions/problems
+- Note that it's not possible to use on non model organisms and then proceeds to subset their data so that it works on a non-model organism
+- English (allow, state-of-the-art
+
 
 Return to [JC start](../../)
