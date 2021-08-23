@@ -21,6 +21,7 @@
 ### Short-read WGS data of NA12878 and L1Hs 5' genomic DNA/L1 junction sequence k-mer analysis
 ### Polymorphic L1Hs insertion datasets and genomic annota- tion information
 ### NA12878 cell line preparation and whole genome 3' targeted L1 capture technology for gDNA
+### Resolving non-reference L1Hs insertions from whole genome 3′ targeted L1 capture data in bulk experiment
 
 ## Results
 
